@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Admin Dashboard')</title>
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}"> <!-- Include your CSS file -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css">
+    <script src="https://cdn.ckeditor.com/4.24.0-lts/standard/ckeditor.js"></script>
     <style>
         /* Basic reset and box-sizing */
 * {
@@ -23,7 +25,7 @@ body {
 }
 
 .navbar, .sidebar {
-    background-color: #00008B; /* Consistent color for both navbar and sidebar */
+    background-color: #161825; /* Consistent color for both navbar and sidebar */
     color: white;
 }
 
@@ -53,7 +55,7 @@ body {
     color: white; /* Consistent color for logout link */
     text-decoration: none;
     margin-left: auto; /* Push logout link to the far right */
-    padding: 0 15px;
+    padding: 15px;
     font-size: 16px;
 }
 
@@ -150,7 +152,7 @@ body {
     </style>
 </head>
 <body>
-    <div class="navbar">
+    <div class="navbar d-flex justify-content-between align-items-center">
         <h2>SWAHILI UNITS Admin</h2>
         <div class="logout">
             <a href="{{ route('logout') }}">Logout</a>
@@ -199,7 +201,10 @@ body {
         function toggleSidebar() {
             var sidebar = document.querySelector('.sidebar');
             sidebar.classList.toggle('collapsed');
+            
         }
+        
     </script>
+
 </body>
 </html>

@@ -4,6 +4,9 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ReadmoreController;
 
+
+Auth::routes();
+
 Route::prefix('admin')->group(function () {
      Route::resource('posts', PostController::class);
 });
