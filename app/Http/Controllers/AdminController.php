@@ -16,24 +16,13 @@ class AdminController extends Controller
         return view('admin.dashboard', compact('posts'));
     }
 
-    public function projects()
-    {
-        $projects = Project::all();
-        return view('admin.projects', compact('projects'));
-    }
-
     public function content()
     {
         // Handle content management
         return view('admin.content');
     }
 
-    public function team()
-    {
-        // Handle team management
-        return view('admin.team');
-    }
-
+    
     public function testimonials()
     {
         // Handle testimonials

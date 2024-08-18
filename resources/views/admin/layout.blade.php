@@ -166,18 +166,12 @@ body {
                 <i class="icon fas fa-tachometer-alt"></i>
                 <span class="text">Dashboard</span>
             </a>
-            <a href="{{ route('admin.projects') }}">
-                <i class="icon fas fa-project-diagram"></i>
-                <span class="text">Projects</span>
-            </a>
+          
             <a href="{{ route('admin.content') }}">
                 <i class="icon fas fa-file-alt"></i>
                 <span class="text">Content</span>
             </a>
-            <a href="{{ route('admin.team') }}">
-                <i class="icon fas fa-users"></i>
-                <span class="text">Team</span>
-            </a>
+            
             <a href="{{ route('admin.testimonials') }}">
                 <i class="icon fas fa-quote-right"></i>
                 <span class="text">Testimonials</span>
