@@ -3,18 +3,29 @@
 @section('content')
 <div class="container mt-5">
     <h2>Create a New Post</h2>
-    <form action="{{ route('posts.store') }}" method="POST" enctype="multipart/form-data">
+    @if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+
+  
+@endif
+
+    <form action="{{ isset($post) ? route('post.update', $post->id) : route('post.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
+        @if(isset($post))
+        @method('PUT')
+    @endif
         <!-- Post Title -->
         <div class="form-group mb-4">
             <label for="title">Post Title</label>
-            <input type="text" name="title" id="title" class="form-control" placeholder="Enter the post title">
+            <input type="text" name="title" id="title" class="form-control" placeholder="Enter the post title"  value="{{ old('title', $post->title ?? '') }}">
         </div>
 
         <!-- Rich Text Editor -->
         <div class="form-group mb-4">
             <label for="content">Post Content</label>
-            <textarea name="content" id="content" class="form-control" placeholder="Write your post content here"></textarea>
+            <textarea name="content" id="content" class="form-control" >{{ old('content', $post->content ?? '') }}</textarea>
             
         </div>
 
@@ -26,10 +37,21 @@
 
         <!-- Submit Button -->
         <div class="form-group mb-4">
-            <button type="submit" class="btn btn-primary">Create Post</button>
+            <button type="submit" class="btn btn-primary">{{ isset($post) ? 'Update Post' : 'Create Post' }}</button>
         </div>
     </form>
+    @if ($errors ->any())
+    <div class="alert alert-danger">
+        <strong>Whoops!</strong> There were some problems with your input<br><br>
+        <ul>
+            @foreach ($errors->all() as $error )
+                    <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 </div>
+
 
 @yield('styles')
 <style>

@@ -10,8 +10,8 @@ class PostController extends Controller
    // Display a listing of the posts
    public function index()
    {
-       $posts = Post::all();  // Fetch all posts
-       return view('admin.content', compact('posts'));  // Pass the posts to the view
+       $posts = Post::latest()->paginate(5);  // Fetch all posts
+       return view('admin.dashboard', compact('posts') ->with($request()->input('page')));  // Pass the posts to the view
    }
 
    // Show the form for editing a specific post
@@ -19,7 +19,7 @@ class PostController extends Controller
    {
        $post = Post::findOrFail($id);  // Fetch the specific post to edit
        $posts = Post::all();  // Fetch all posts for display
-       return view('admin.content', compact('post', 'posts'));  // Pass the post and all posts to the view
+       return view('admin.content', compact('post'));  // Pass the post and all posts to the view
    }
 
    // Store a newly created post in storage
@@ -42,7 +42,7 @@ class PostController extends Controller
        }
 
        $post->save();
-       return redirect()->route('posts.index');
+       return redirect()->route('admin.content')->with ('success','post created successfully');
    }
 
    // Update the specified post in storage

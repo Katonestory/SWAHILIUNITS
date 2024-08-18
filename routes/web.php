@@ -47,3 +47,13 @@ Route::get('/staff', function () {
 
 
 Route::get('/about-more', [ReadmoreController::class, 'showMore'])->name('about.more');
+
+Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('post.destroy');
+
+Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('post.edit');
+Route::put('/posts/{id}', [PostController::class, 'update'])->name('post.update');
+Route::post('/posts', [PostController::class, 'store'])->name('post.store');
+
+
+
+

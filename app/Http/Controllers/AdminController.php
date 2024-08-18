@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
+
 
 class AdminController extends Controller
 {
     
     public function dashboard()
     {
+        $posts = post::all(); // Fetch all posts from the database
         // Retrieve relevant data for the dashboard
-        return view('admin.dashboard');
+        return view('admin.dashboard', compact('posts'));
     }
 
     public function projects()
