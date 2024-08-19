@@ -11,7 +11,7 @@ class PostController extends Controller
    public function index()
    {
        $posts = Post::latest()->paginate(5);  // Fetch all posts
-       return view('admin.dashboard', compact('posts') ->with($request()->input('page')));  // Pass the posts to the view
+       return view('admin.dashboard', compact('posts'));  // Pass the posts to the view
    }
 
    // Show the form for editing a specific post
@@ -65,7 +65,8 @@ class PostController extends Controller
        }
 
        $post->save();
-       return redirect()->route('posts.index');
+       return redirect()->route('post.index')->with('success', 'Post updated successfully');
+
    }
 
    // Remove the specified post from storage

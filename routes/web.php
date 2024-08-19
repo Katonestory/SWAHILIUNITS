@@ -13,17 +13,12 @@ Route::prefix('admin')->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-    Route::get('/admin/projects', [AdminController::class, 'projects'])->name('admin.projects');
+    
     Route::get('/admin/content', [AdminController::class, 'content'])->name('admin.content');
-    Route::get('/admin/team', [AdminController::class, 'team'])->name('admin.team');
+    
     Route::get('/admin/testimonials', [AdminController::class, 'testimonials'])->name('admin.testimonials');
     Route::get('/admin/inquiries', [AdminController::class, 'inquiries'])->name('admin.inquiries');
     Route::get('/admin/settings', [AdminController::class, 'settings'])->name('admin.settings');
-
-    Route::post('/admin/projects', [AdminController::class, 'storeProject'])->name('admin.projects.store');
-    Route::put('/admin/projects/{id}', [AdminController::class, 'updateProject'])->name('admin.projects.update');
-    Route::delete('/admin/projects/{id}', [AdminController::class, 'destroyProject'])->name('admin.projects.destroy');
-    // Similarly add routes for other entities like content, team, testimonials, etc.
 });
 
 Route::get('/', function () {
@@ -53,6 +48,8 @@ Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('post.des
 Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('post.edit');
 Route::put('/posts/{id}', [PostController::class, 'update'])->name('post.update');
 Route::post('/posts', [PostController::class, 'store'])->name('post.store');
+Route::get('/posts', [PostController::class, 'index'])->name('post.index');
+
 
 
 
