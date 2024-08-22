@@ -6,7 +6,9 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>SwahiliUnits</title>
+    <link rel="icon" href="{{ asset('images/Swahili_Units_Logo.png') }}" type="image/png">
+
+    <title>Swahili Units</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -71,7 +73,7 @@
                                     <div class="full">
                                         <div class="center-desk">
                                             <div class="logo">
-                                                <a href="index.html">Rhino</a>
+                                                <a href="{{ url('/') }}">Swahili Units</a>
                                             </div>
                                         </div>
                                     </div>
@@ -141,19 +143,19 @@
             <div class="container">
                <div class="row">
                   <div class=" col-lg-3 col-md-6">
-                     <a class="logo_bottom"><img src="images/logo_bottom.png" alt="#"/></a>
+                     <a class="logo_bottom"><img src="images/Swahili_Units_logo.png" alt="#"/></a>
                      <p class="many">
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humou
+                        
                      </p>
                   </div>
                   <div class="col-lg-2 offset-lg-1 col-md-6">
                      <h3>QUICK LINKS</h3>
                      <ul class="link_menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html"> About</a></li>
-                        <li><a href="project.html">Projects</a></li>
-                        <li><a href="staff.html">Staff</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a class="nav-link" href="#home">Home</a></li>
+                        <li><a class="nav-link" href="#about"> About</a></li>
+                        <li><a class="nav-link" href="#project">Projects</a></li>
+                        <li><a class="nav-link" href="#staff">Staff</a></li>
+                        <li><a class="nav-link" href="#contact">Contact Us</a></li>
                      </ul>
                   </div>
                   <div class=" col-lg-3 col-md-6">

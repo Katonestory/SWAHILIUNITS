@@ -72,7 +72,7 @@
                               <div class="full">
                                  <div class="center-desk">
                                     <div class="logo">
-                                       <a href="index.html">Rhino</a>
+                                       <a href="{{ url('/') }}">Swahili Units</a>
                                     </div>
                                  </div>
                               </div>
