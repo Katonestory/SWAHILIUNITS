@@ -265,16 +265,15 @@ button {
 /*-- header --*/
 
 .header {
-     width: 100%;
-     height: 116px;
-}
+     position: relative; /* Positioned relative to the .full_bg */
+     z-index: 2; /* Ensure it appears above the background */
+ }
 
-.header_top {
-     background-color: #161825;
-     padding: 12px 0;
-     padding: 13px 0;
-}
-
+ .header .header_top,
+ .header .header_bottom {
+     position: relative; /* Ensure these elements are positioned relative to .header */
+     z-index: 3; /* Ensure they are above other header content */
+ }
 ul.contat_infoma {
      display: block ruby;
 }
@@ -401,11 +400,13 @@ ul.search li a:hover {
 /** banner section **/
 
 .full_bg {
-     background: url(../images/banner2.jpg);
-     background-size: 100% 100%;
-     background-position: center;
-     background-repeat: no-repeat;
-}
+     background: url(../images/banner2.jpg) no-repeat center center;
+     background-size: cover;
+     width: 100%;
+     height: 100vh;
+     position: relative; /* Ensure it's correctly positioned relative to its parent */
+     z-index: 1; /* Set lower z-index to be behind other content */
+ }
 
 .banner_main {
      position: relative;
@@ -451,17 +452,25 @@ ul.search li a:hover {
      background: #1b1b1a;
 }
 
-#myCarousel .carousel-control-prev,
-#myCarousel .carousel-control-next {
+#myCarousel {
+     position: relative; /* Positioned relative to the .full_bg */
+     z-index: 4; /* Ensure carousel is above the background */
+ }
+
+
+ #myCarousel .carousel-control-prev,
+ #myCarousel .carousel-control-next {
      width: 75px;
      height: 75px;
      background: #161825;
      opacity: 1;
      font-size: 42px;
      color: #fff;
-     top: 134%;
      border-radius: 40px;
-}
+     top: 50%; /* Center buttons vertically */
+     transform: translateY(-50%); /* Adjust vertical alignment */
+     z-index: 5;/* Ensure buttons are on top */
+ }
 
 #myCarousel .carousel-control-prev:hover,
 #myCarousel .carousel-control-next:hover,
@@ -471,13 +480,20 @@ ul.search li a:hover {
      color: #fff;
 }
 
-#myCarousel .carousel-control-prev {
-     right: 15%;
-     left: inherit;
-}
 
-#myCarousel .carousel-control-next {
-     right: 9%;
+#myCarousel .carousel-control-prev {
+     left: 10px; /* Position on the left */
+ }
+ #myCarousel .carousel-control-next {
+     right: 10px; /* Position on the right */
+ }
+ 
+ #myCarousel .carousel-control-prev:hover,
+#myCarousel .carousel-control-next:hover,
+#myCarousel .carousel-control-prev:focus,
+#myCarousel .carousel-control-next:focus {
+    background: #fd9801;
+    color: #fff;
 }
 
 .banner .carousel-indicators {

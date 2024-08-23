@@ -33,7 +33,7 @@
 <body class="main-layout">
     <!-- loader  -->
     <div class="loader_bg">
-        <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+        <div class="loader"><img src="images/Swahili_Units_Logo.png" alt="#"/></div>
     </div>
     <!-- end loader -->
     <!-- header -->
@@ -180,7 +180,7 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-8 offset-md-2">
-                        <p>© 2019 All Rights Reserved. Design by <a href="https://html.design/"> Free Html Templates</a></p>
+                        <p>© 2024 All Rights Reserved.</p>
                      </div>
                   </div>
                </div>
