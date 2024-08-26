@@ -3,8 +3,8 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="titlepage">
-                     <h2>Our Features Projects</h2>
-                     <span>It is a long established fact that a reader will be distracted by the readable</span>
+                     <h2 style="color: #FFFFFF;">Our Features Projects</h2>
+                     <span style="color: #FFFFFF;">It is a long established fact that a reader will be distracted by the readable</span>
                   </div>
                </div>
             </div>

@@ -43,6 +43,7 @@ html {
 }
 
 body {
+
      color: #666666;
      font-size: 14px;
      font-family: 'Poppins', sans-serif;
@@ -190,6 +191,7 @@ img {
 
 .navbar-form input {
      border: none !important;
+     z-index: 1;
 }
 
 .badge {
@@ -241,7 +243,7 @@ button {
 .loader_bg {
      position: fixed;
      z-index: 9999999;
-     background: #fff;
+     background: #111010;
      width: 100%;
      height: 100%;
 }
@@ -265,8 +267,16 @@ button {
 /*-- header --*/
 
 .header {
-     position: relative; /* Positioned relative to the .full_bg */
-     z-index: 2; /* Ensure it appears above the background */
+   
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other content */
+    background-color: #fff; /* Background color of your header */
+    padding: 1px 10; /* Adjust padding as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibilit*/
+
  }
 
  .header .header_top,
@@ -331,8 +341,8 @@ ul.social_icon_top li a:hover {
 
 .header_bottom {
      background-color: #fff;
-     height: 100px;
-     padding: 25px 25px;
+     height: 55px;
+     padding: 3px 3px;
 }
 
 .logo {
@@ -353,6 +363,8 @@ ul.social_icon_top li a:hover {
 .navigation.navbar {
      float: right;
      padding: 0;
+     display: flex;
+  justify-content: space-between;
 }
 
 .navigation.navbar-dark .navbar-nav .nav-link {
@@ -399,23 +411,23 @@ ul.search li a:hover {
 
 /** banner section **/
 
-.full_bg {
+/* .full_bg {
      background: url(../images/banner2.jpg) no-repeat center center;
      background-size: cover;
      width: 100%;
      height: 100vh;
      position: relative; /* Ensure it's correctly positioned relative to its parent */
-     z-index: 1; /* Set lower z-index to be behind other content */
- }
+     /*z-index: 0;*/
+ /*} */
 
 .banner_main {
      position: relative;
-     padding-bottom: 212px;
+     padding-bottom: 180px;
 }
 
 .build_box {
      text-align: left;
-     padding-top: 20%;
+     padding-top: 5%;
 }
 
 .banner_po {
@@ -453,8 +465,12 @@ ul.search li a:hover {
 }
 
 #myCarousel {
+     padding-top: 140px; 
      position: relative; /* Positioned relative to the .full_bg */
-     z-index: 4; /* Ensure carousel is above the background */
+     width: 100%;
+     height: 100vh; /* Adjust as needed for full height */
+    
+
  }
 
 
@@ -469,7 +485,7 @@ ul.search li a:hover {
      border-radius: 40px;
      top: 50%; /* Center buttons vertically */
      transform: translateY(-50%); /* Adjust vertical alignment */
-     z-index: 5;/* Ensure buttons are on top */
+     /* z-index: 5;Ensure buttons are on top */
  }
 
 #myCarousel .carousel-control-prev:hover,
@@ -532,7 +548,7 @@ ul.search li a:hover {
 
 .read_more {
      font-size: 17px;
-     background-color: #1b1b1a;
+     background-color: ;
      color: #fff;
      padding: 17px 0px;
      width: 100%;
@@ -544,10 +560,11 @@ ul.search li a:hover {
      border-radius: 5px;
      height: 60px;
      text-transform: uppercase;
+     border: 2px solid #D4AF37; 
 }
 
 .read_more:hover {
-     background: #f4a111;
+     background:  #fd9801;
      color: #fff;
      transition: ease-in all 0.5s;
 }
@@ -596,8 +613,8 @@ ul.search li a:hover {
 /** about section **/
 
 .about {
-     background-color: #fff;
-     padding-top: 90px;
+     background-color: #161825;
+     padding-top: 40px;
 }
 
 .about .titlepage {
@@ -635,7 +652,7 @@ ul.search li a:hover {
 
 .projects {
      padding-top: 90px;
-     background: #fff;
+     background: #161825;
 }
 
 .relative3 {
@@ -1142,6 +1159,7 @@ ul.social_icon_staff li a:hover {
 .logo_bottom {
      float: left;
      padding-bottom: 24px;
+     
 }
 
 ul.link_menu li {

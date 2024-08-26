@@ -71,9 +71,9 @@
                      </div>
                   </div>
                </div>
-               <div class="col-md-12">
+               {{-- <div class="col-md-12">
                   <a class="read_more" href="Javascript:void(0)"> See More</a>
-               </div>
+               </div> --}}
             </div>
          </div>
       </div>

@@ -13,7 +13,7 @@
                                  <div class="build_box">
                                     <h1>Professional&nbsp;Building and<br>Real&nbsp;Estate&nbsp;Services.</h1>
                                     <p>There are many variations of passages of Lorem Ipsum available, but the majority<br> There are many variations of passages of</p>
-                                    <a class="read_more conatct_btn" href="#contact" role="button">Contact Us</a>
+                                    {{-- <a class="read_more conatct_btn" href="#contact" role="button">Contact Us</a> --}}
                                  </div>
                               </div>
                            </div>
@@ -28,7 +28,7 @@
                                  <div class="build_box">
                                     <h1>We&nbsp;Build&nbsp;Your&nbsp;Dream<br>Home,&nbsp;You&nbsp;Live&nbsp;Your Dream Life.</h1>
                                     <p>There are many variations of passages of Lorem Ipsum available, but the majority<br> There are many variations of passages of</p>
-                                    <a class="read_more conatct_btn" href="#contact" role="button">Contact Us</a>
+                                    {{-- <a class="read_more conatct_btn" href="#contact" role="button">Contact Us</a> --}}
                                  </div>
                               </div>
                            </div>
@@ -43,7 +43,7 @@
                                  <div class="build_box">
                                     <h1>Ready&nbsp;To&nbsp;Bring&nbsp;Your<br>Construction&nbsp;Project<br>To&nbsp;Life?</h1>
                                     <p>There are many variations of passages of Lorem Ipsum available, but the majority<br> There are many variations of passages of</p>
-                                    <a class="read_more conatct_btn" href="#contact" role="button">Contact Us</a>
+                                    {{-- <a class="read_more conatct_btn" href="#contact" role="button">Contact Us</a> --}}
                                  </div>
                               </div>
                            </div>
